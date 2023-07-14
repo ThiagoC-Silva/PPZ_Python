@@ -1,5 +1,0 @@
-print('Informe a data de seu nascimento.')
-day = input('Dia: ')
-month = input('Mês: ')
-year = input('Ano: ')
-print('Você informou que nasceu dia ',day,' de ',month,' de ',year,'.')
