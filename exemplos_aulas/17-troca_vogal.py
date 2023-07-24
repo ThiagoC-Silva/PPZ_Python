@@ -15,3 +15,4 @@ while cont < len(palavra):
     cont = cont + 1
 
 print(sem_vogal)
+print(dir (palavra))
