@@ -1,6 +1,6 @@
 mes = '''janeiro fevereiro março abril
 maio junho julho agosto
-semtembro outubro novembro dezembri '''.split()
+semtembro outubro novembro dezembro'''.split()
 
 dd,mm,aaaa = input('dd/mm/aaaa: ').split('/')
 mm = int(mm)
