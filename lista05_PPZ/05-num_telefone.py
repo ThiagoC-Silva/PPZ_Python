@@ -37,18 +37,27 @@ telefones = '''213752 216732 221063 221545 225583 229133 230648 233222
 637656 641136 644176 644973 647617 652218 657143 659902
 662224 666265 668010 672480 672695 676868 677125 678315'''.split()
 
+validos = 0
 
+def azar(numero):
+    if numero[0] == numero[-1]:
+        return True
 
-def consecutivos():
-    a = ''
-    b = ''
-    identicos = 0
-    for x in telefones:
-        for i in x:
-            a, b = b, i
-            if a==b:
-                identicos += 1
-                break
-    return identicos
-consecutivos()
+def pares(numero):
+    soma_digitos = 0
+    for digito in numero:
+        soma_digitos += int(digito)
+    if soma_digitos%2==0:
+        return True
 
+def consecutivo(numero):
+    digito2 = 0
+    for digito in numero:
+        digito1, digito2 = digito2, digito
+        if digito1 == digito2:
+            return True
+        
+for numero in telefones:
+    if not consecutivo(numero) and pares(numero) and not azar(numero):
+        validos += 1
+print(validos)
